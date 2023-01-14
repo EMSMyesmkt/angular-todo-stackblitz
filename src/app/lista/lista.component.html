@@ -1,0 +1,11 @@
+<div class="lista-componente">
+  <ul>
+    <li *ngFor="let task of tasks; let z = index">
+      [ {{ task.feito ? 'X' : '' }}] {{ task.nome }}
+      <button (click)="remover.emit(task.id)">apagar</button>
+      <button (click)="estado.emit(task.id)">
+        {{ task.done ? 'nãofeito' : 'feito' }}
+      </button>
+    </li>
+  </ul>
+</div>

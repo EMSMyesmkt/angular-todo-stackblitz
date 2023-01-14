@@ -1,0 +1,13 @@
+<div class="pai">
+  <h1>To Do App</h1>
+  <button (click)="mostrar()">consola</button>
+
+  <app-form (result)="onResult($event)"></app-form>
+
+  <app-list
+    [tasks]="tasks"
+    (remove)="OnRemove($event)"
+    (status)="OnChangeStatus($event)"
+  >
+  </app-list>
+</div>
